@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/css/style.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 54px;
+		background-image:none;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Main</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="main.html">Home
+                <span class="sr-only"></span>
+              </a>
+            </li>
+ <li class="nav-item active">
+              <a class="nav-link" href="mycard.html">My card
+                <span class="sr-only"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row" style="background-color:#FFFFFF; border-bottom:2px solid #9b1435;">
+        <div class="col-lg-12">
+          <div class="loanInfo">
+			<span class="titleGray">you own</span>
+			<span class="priceRed">129,23€</span>
+		  </div>
+          <div class="loanInfo">
+			<span class="titleGray">own to you</span>
+			<span class="priceGreen">85,70€</span>
+		  </div>
+          <div class="loanInfo" style="border-right:0px;">
+			<span class="titleGray">total balance</span>
+			<span class="priceRed">-43,53€</span>
+		  </div>
+        </div>
+
+      </div>
+	  <div class="row grayBackgroundScroll" style="background-color: #f0f0f0; padding-top:5px; padding-bottom:20px;">
+		<div class="col-lg-12 text-center">
+			<div class="rectangleRed" onclick="toOwned()">
+				<div class="rowRectangle">
+					<span class="titleGray" style="float:left;">owned</span>
+					<span class="titleGray" style="float:right;">months left</span>
+				</div>
+				<div class="rowRectangle">
+					<span class="priceRed" style="float:left;">-24,43€</span>
+					<span class="priceRed" style="float:right;">3</span>
+				</div>
+			</div>
+			<div class="rectangleGreen"  onclick="toOwns()">
+				<div class="rowRectangle">
+					<span class="titleGray" style="float:left;">owes you</span>
+					<span class="titleGray" style="float:right;">months left</span>					
+				</div>
+				<div class="rowRectangle">
+					<span class="priceGreen" style="float:left;">-24,43€</span>
+					<span class="priceGreen" style="float:right;">5</span>
+				</div>
+			</div>
+			<div class="rectangleRed" onclick="toOwned()">
+				<div class="rowRectangle">
+					<span class="titleGray" style="float:left;">owned</span>
+					<span class="titleGray" style="float:right;">months left</span>
+				</div>
+				<div class="rowRectangle">
+					<span class="priceRed" style="float:left;">-24,43€</span>
+					<span class="priceRed" style="float:right;">3</span>
+				</div>
+			</div>
+			<div class="rectangleGreen" onclick="toOwns()">
+				<div class="rowRectangle">
+					<span class="titleGray" style="float:left;">owes you</span>
+					<span class="titleGray" style="float:right;">months left</span>					
+				</div>
+				<div class="rowRectangle">
+					<span class="priceGreen" style="float:left;">-24,43€</span>
+					<span class="priceGreen" style="float:right;">7</span>
+				</div>
+			</div>
+			<br />
+		</div>
+	  </div>
+	  <div class="row" style="background-color: #ffffff; padding-top:20px; padding-bottom:20px; ">
+		<div class="col-lg-12 text-center">
+			<a href="takeLoan.html" class="btnPurple" style="margin-top:20px;">Take Loan</a>
+			<a href="giveLoan.html" class="btnPurple" style="margin-top:20px;">Give Loan</a>
+		</div>
+		</div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+	function toOwned(){
+		window.location.href = "ownedLoan.html";
+	}
+	
+	function toOwns(){
+		window.location.href = "ownsLoan.html";
+	}
+	</script>
+  </body>
+
+</html>
