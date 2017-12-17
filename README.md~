@@ -1,14 +1,13 @@
 ### Projekt za TPO
 
-Potrebujemo node in yarn v $PATHu.
 
 Namestimo module:
 
-```yarn install```
+```npm install```
 
 Pozenemo aplikacijo:
 
-```yarn run server```
+```node index.js```
 
 Obiscemo ```http://localhost:3000/```
 

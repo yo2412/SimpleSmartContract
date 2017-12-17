@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "echo 'Server listening on: http://localhost:3000/' && node index.js"
+    "server": "echo 'Server listening on: http://localhost:3000/'; node index.js"
   },
   "repository": {
     "type": "git",
