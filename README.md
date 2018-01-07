@@ -1,6 +1,6 @@
 ### Projekt za TPO
 
-Potrebujemo node in yarn v $PATHu.
+Potrebujemo node, node-dev in yarn v $PATHu.
 
 Namestimo module:
 
@@ -8,7 +8,7 @@ Namestimo module:
 
 Pozenemo aplikacijo:
 
-```yarn run server```
+```yarn run dev```
 
 Obiscemo ```http://localhost:3000/```
 

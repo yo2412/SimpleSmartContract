@@ -4,7 +4,7 @@ const express = require('express'),
 
 app.use(express.static("public"));
 
-app.get('/', (req, res) => res.send("hello world yo"));
+app.get('/', (req, res) => res.send("hello world"));
 
 app.listen(port, function() {
 	console.log("listening on localhost:3000");

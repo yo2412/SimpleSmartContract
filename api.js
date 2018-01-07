@@ -1,6 +1,5 @@
 /* deploy smart contract */
 
-/* const fetch = require('node-fetch'); */
 
 const Web3 = require('web3');
 
