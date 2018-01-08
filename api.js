@@ -26,3 +26,4 @@ class EthConnection {
 ethConnection = new EthConnection();
 
 ethConnection.showState();
+
