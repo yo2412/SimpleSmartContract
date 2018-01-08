@@ -39,7 +39,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
+              <a class="nav-link" href="login.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -68,11 +68,11 @@
 			<input type="text" id="deployAddress" class="form-control" />
 			<h5>Privatni kljuc</h5>
 			<input type="text" id="privateKey" class="form-control" />
-			<h5>Adrea prejemnika</h5>
+			<h5>Adresa prejemnika</h5>
 			<input type="text" id="reciverAddress" class="form-control" /><br />
 			<h5>Komentar pogodbe</h5>
-			<textarea rows="6" class="form-control"></textarea><br />
-			<input type="button"  class="btn btn-primary" value="Deploy">
+			<textarea rows="6" class="form-control" id="comment"></textarea><br />
+			<input type="button" onclick="deployContract()"  class="btn btn-primary" value="Deploy">
 			<br />
 			<br />
         </div>
@@ -108,7 +108,17 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function deployContract(){
+			var contract = $("#contract option:selected").val();
+			var deployAddress = $("#deployAddress").val();
+			var privateKey = $("#privateKey").val();
+			var reciverAddress = $("#reciverAddress").val();
+			var comment = $("#comment").val();
 
+			}
+
+	</script>
   </body>
 
 </html>
