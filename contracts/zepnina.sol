@@ -1,14 +1,16 @@
 pragma solidity ^0.4.0;
 
+
+#
 contract Zepnina{
     
     uint256 amount;
-    address reciver;
+	// %reciver% zamenjaj z addresso prejemnika
+	address reciver = %reciver%;
     
-    function Zepnina(address _reciver) public{
-            reciver = _reciver;
+    function Zepnina() public{
     }
-    
+	
     function () payable public{
         if(msg.value != 0){
             amount += msg.value;
