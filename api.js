@@ -21,8 +21,12 @@ class EthConnection {
 		console.log(this.web3);	
 	}
 
+	getBlock() {
+		this.web3.eth.getBlockNumber().then(console.log);
+	}
+
 }
 
 ethConnection = new EthConnection();
 
-ethConnection.showState();
+ethConnection.getBlock();
