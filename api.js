@@ -29,4 +29,9 @@ class EthConnection {
 
 ethConnection = new EthConnection();
 
+<<<<<<< HEAD
 ethConnection.getBlock();
+=======
+ethConnection.showState();
+
+>>>>>>> f027277aaa48652d5a6795a854db903ed225d428

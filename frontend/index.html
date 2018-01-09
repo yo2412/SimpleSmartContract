@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TPO</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog-post.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">TPO - Personalized Contracts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="wallet.html">Wallet
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<div class="row">
+	<div class="col-lg-12">
+		<div  style="background-image:url('back.jpg'); background-size:cover; width:100%; height:350px;" ></div>
+	</div>
+	</div>
+    <!-- Page Content -->
+    <div class="container">
+
+	 <div class="row" style="padding-top:50px; padding-bottom:50px;">
+	
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+			<h5>Izberi pogodbo za deploy</h5>
+			<select id="contract" class="form-control">
+				<option>-</option>
+				<option>Zepnina</option>
+				<option>Kredit</option>
+			</select>
+			<h5>Adresa za deploy</h5>
+			<input type="text" id="deployAddress" class="form-control" />
+			<h5>Privatni kljuc</h5>
+			<input type="text" id="privateKey" class="form-control" />
+			<h5>Adresa prejemnika</h5>
+			<input type="text" id="reciverAddress" class="form-control" /><br />
+			<h5>Komentar pogodbe</h5>
+			<textarea rows="6" class="form-control" id="comment"></textarea><br />
+			<input type="button" onclick="deployContract()"  class="btn btn-primary" value="Deploy">
+			<br />
+			<br />
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+			<h5>Moje pogodbe</h5>
+			<div class="alert alert-success">
+			  <strong>Zepnina</strong> Zepnina za Miho.
+			</div>
+			<div class="alert alert-success">
+			  <strong>Zepnina</strong> Kr en komentar.
+			</div>
+			<div class="alert alert-warning">
+			  <strong>Zepnina!</strong> Zaključeno.
+			</div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function deployContract(){
+			var contract = $("#contract option:selected").val();
+			var deployAddress = $("#deployAddress").val();
+			var privateKey = $("#privateKey").val();
+			var reciverAddress = $("#reciverAddress").val();
+			var comment = $("#comment").val();
+
+			}
+
+	</script>
+  </body>
+
+</html>
