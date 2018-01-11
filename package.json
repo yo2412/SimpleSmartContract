@@ -27,6 +27,7 @@
     "gulp-uglify": "^1.5.4"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "express": "^4.16.2",
     "gyp": "^0.5.0",
     "scrypt": "^6.0.3",
