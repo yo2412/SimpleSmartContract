@@ -9,10 +9,6 @@ app.use(express.static("frontend"));
 ethConnection = new EthConnection();
 currentRequests = {};
 
-
-
-app.get('/', (req, res) => res.send("hello world"));
-
 app.get('/api/deploy', (req, res) => {
 	let id = crypto.randomBytes(6).toString('hex');
 	res.send(id);
