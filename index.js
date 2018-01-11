@@ -19,11 +19,27 @@ app.get('/api/deploy', (req, res) => {
 	res.status(201).end();
 	currentRequests[id] = null;
 
+
+
+	/* query v stilu:
+
+	{
+		privateKey: "0x321123adssaddsa",
+		contractName: "Zepnina",
+		params: {
+			"receiver": "0x213213dasda"
+		}
+	}
+
+	ethConnection.deployContract(req.query.privateKey, req.query.contractName, req.query.params).then(function(res) {
+    	currentRequests[id] = res;	
+	}); */
+
 	ethConnection.deployContract("0xca8b218de3ae8cba66fc3fd81d80d9bda9fead4f85d49ae7baa8a9b484da0e1c", "Zepnina", {
 		"receiver": "0x874b54a8bd152966d63f706bae1ffeb0411921e5"
 	}).then(function(res) {
     	currentRequests[id] = res;	
-	});
+	});	
 });
 
 app.get('/api/status/:id', (req, res) => {
