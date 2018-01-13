@@ -18,19 +18,24 @@ sequelize.authenticate().then( (err) => {
 ////////////////////////////////////////////////////////// MODELS ///////////////////////////////////////////////////////////
 
 const Deploy = sequelize.define('deploycontracts', {
-  id: { type: Sequelize.INTEGER, primaryKey: true},
-  users: Sequelize.STRING,
+  id: { type: Sequelize.UUID, primaryKey: true },
   contract: Sequelize.STRING,
-  adress: Sequelize.STRING
+  address: Sequelize.STRING
 });
 
 
 const User = sequelize.define('users', {
-  username: { type: Sequelize.STRING, primaryKey: true},
+  id: { type: Sequelize.UUID, primaryKey: true },
+  username: Sequelize.STRING, 
   password: Sequelize.STRING,
   realname: Sequelize.STRING
 });
 
+
+Deploy.belongsTo(User);
+
+
+sequelize.sync({ force: true }).then( (err) => { console.log("it works!") });
 ///////////////////////////////////////////  USE FUNCTIONS  ////////////////////////////////////////////////////////////////////////////
 
 insertUsers('sebita','hahah','cualquiera');
