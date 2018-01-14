@@ -55,19 +55,17 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.set('views', __dirname + '/frontend');
+//app.set('static', __dirname + '/frontend');
+
+app.use(express.static('frontend'));
 
 app.get('/login', (req, res) => {
-	res.end("sorry");
+	res.sendFile(__dirname + '/frontend/login.html');
 });
 
-app.get('/wallet', (req, res) => {
-	console.log(req.session.passport.user);
-	res.end("nice");
-});
 
 app.post('/login', 
-  passport.authenticate('local', { successRedirect: '/wallet', failureRedirect: '/login', failureFlash: true })
+  passport.authenticate('local', { successRedirect: '/wallet.html', failureRedirect: '/login?failed=true', failureFlash: true })
 );
 
 
@@ -76,10 +74,10 @@ app.post('/login',
 
 app.get('/', function(req, res) {
     sess = req.session;
-    if (sess.user) {
-        res.redirect('/wallet');
+    if (sess.passport.user) {
+        res.redirect('/wallet.html');
     } else {
-        res.render('index.html');
+        res.redirect('/login');
     }
 });
 

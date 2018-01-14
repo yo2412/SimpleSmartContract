@@ -58,43 +58,47 @@
     <div class="container">
 
 	 <div class="row" style="padding-top:50px; padding-bottom:50px;">
-		<div class="col-md-4">
+	 
+	 <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
 			<h5>Moje pogodbe</h5>
-			<p><a href="details.html">Vse pogodbe</a></p>
-			<div class="alert alert-success" >
+			<div class="alert alert-success" style="cursor:pointer;" onclick="showDetails()">
 			  <strong>Zepnina</strong> Zepnina za Miho.
 			</div>
-			<div class="alert alert-success" >
+			<div class="alert alert-success"style="cursor:pointer;" onclick="showDetails()">
 			  <strong>Zepnina</strong> Kr en komentar.
 			</div>
-			<div class="alert alert-warning">
+			<div class="alert alert-warning" style="cursor:pointer;" onclick="showDetails()">
 			  <strong>Zepnina!</strong> Zaključeno.
 			</div>
+			
         </div>
-		
-		
+
         <!-- Post Content Column -->
         <div class="col-lg-8">
-			<h5>Izberi tip pogodbe</h5>
-			<select id="contract" class="form-control">
-				<option>-</option>
-				<option>Zepnina</option>
-				<option>Kredit</option>
-			</select>
-			<h5>Naslov</h5>
-			<input type="text" id="deployAddress" class="form-control" />
-			<h5>Privatni kljuc</h5>
-			<input type="text" id="privateKey" class="form-control" />
-			<h5>Naslov prejemnika</h5>
-			<input type="text" id="reciverAddress" class="form-control" /><br />
-			<h5>Komentar pogodbe</h5>
-			<textarea rows="6" class="form-control" id="comment"></textarea><br />
-			<input type="button" onclick="deployContract()"  class="btn btn-primary" value="Deploy">
+			<h5>Contract info</h5>
+			<h4 id="infoMsg">Select contract to view info!</h4>
+			<div id="details" style="display:none;">
+				<p><strong>ETH/USD Amount</strong></p>
+				<p id="ethAmount">3.98 ETH / 5500 USD</p>
+				
+				<p><strong>Contract address</strong></p>
+				<p id="contractAddress">0x5tew54a8bd1529f5863f7065f8u2f8b041194876</p>
+				<p><strong><a id="etherscanLink" href="https://etherscan.io/txs?ca=0x002362c343061fef2b99d1a8f7c6aeafe54061af" target="_blank" >View on etherscan</a></strong></p>
+				
+				<p><strong>Owner Address</strong></p>
+				<p id="ownerAddress">0x874b5456bd152966d634hn6bae1ffeb0411921e5</p>
+				<p><strong>Owner Name</strong></p>
+				<p id="ownerName">Prvi uporabnik</p>
+				<p><strong>Reciver Address</strong></p>
+				<p id="reciverName">0x5tew5asdfoiadsf0990fujewf0few09uf1194876</p>
+				<p><strong>Reciver Name</strong></p>
+				<p id="reciverName">Drugi uporabnik</p>
+			</div>
 			<br />
 			<br />
         </div>
 
-        <!-- Sidebar Widgets Column -->
         
 
       </div>
@@ -106,7 +110,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; TPO 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
       </div>
       <!-- /.container -->
     </footer>
