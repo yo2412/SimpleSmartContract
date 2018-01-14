@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "echo 'Server listening on: http://localhost:3000/' && node index.js",
+    "start": "node index.js",
     "dev": "node-dev index.js"
   },
   "repository": {
@@ -27,11 +27,20 @@
     "gulp-uglify": "^1.5.4"
   },
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-sqlite": "0.0.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
     "crypto": "^1.0.1",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "gyp": "^0.5.0",
+    "html": "^1.0.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "scrypt": "^6.0.3",
     "sequelize": "^4.31.0",
+    "sleep": "^5.1.1",
     "solc": "^0.4.19",
     "sqlite3": "^3.1.13",
     "web3": "^1.0.0-beta.27"
