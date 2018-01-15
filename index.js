@@ -65,7 +65,7 @@ app.get('/login', (req, res) => {
 
 
 app.post('/login', 
-  passport.authenticate('local', { successRedirect: '/wallet.html', failureRedirect: '/login?failed=true', failureFlash: true })
+  passport.authenticate('local', { successRedirect: '/index.html', failureRedirect: '/login', failureFlash: true })
 );
 
 

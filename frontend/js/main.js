@@ -4,7 +4,7 @@ var apiUrl = 'https://localhost:3000/';
 
 function deployContract(){
   $.ajax({
-    'url' : apiUrl + 'api/deploy',
+    'url' : 'http://localhost:3000/api/deploy',
     'type' : 'GET',
     'success' : function(data) {
       $("#alertDeploy").slideDown( "slow", function() {});
