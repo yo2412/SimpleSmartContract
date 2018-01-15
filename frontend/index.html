@@ -75,6 +75,8 @@
 		
         <!-- Post Content Column -->
         <div class="col-lg-8">
+			<center id="spinner" style="display:none;"><img src="spinner.gif" /></center>
+			<div id="form">
 			<h5>Izberi tip pogodbe</h5>
 			<select id="contract" class="form-control">
 				<option>-</option>
@@ -95,6 +97,7 @@
 			<h5>Komentar pogodbe</h5>
 			<textarea rows="6" class="form-control" id="comment"></textarea><br />
 			<input type="button" onclick="deployContract()"  class="btn btn-primary" value="Deploy">
+			</div>
 			<br />
 			<br />
         </div>
