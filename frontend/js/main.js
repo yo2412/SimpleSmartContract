@@ -1,22 +1,47 @@
 
 
-var apiUrl = 'https://localhost:3000/';
+var apiUrl = 'http://localhost:3000/';
 
 function deployContract(){
   $.ajax({
     'url' : 'http://localhost:3000/api/deploy',
     'type' : 'GET',
     'success' : function(data) {
-      $("#alertDeploy").slideDown( "slow", function() {});
-	  setTimeout(function(){
-		  $("#alertDeploy").slideUp( "slow", function() {});
-	  }, 5000);
+      
+	  
+	  var id = data;
+	  checkStatus(id);
+	  
+	  
     }
   });
-  $("#alertDeploy").slideDown( "slow", function() {});
-	  setTimeout(function(){
-		  $("#alertDeploy").slideUp( "slow", function() {});
-	  }, 5000);
+}
+
+function checkStatus(id){
+	
+	$.ajax({
+    'url' : apiUrl + 'api/status/'+id,
+    'type' : 'GET',
+    'success' : function(data) {
+		  if(data != null){
+			  $("#contId").text(data);
+			  $("#alertDeploy").slideDown( "slow", function() {});
+		  setTimeout(function(){
+			  $("#alertDeploy").slideUp( "slow", function() {});
+		  }, 15000);
+		  
+	  }else{
+		  setTimeout(function(){
+			 checkStatus(id); 
+		  }, 1000);
+		  
+	  }
+	  
+	  
+	  
+    }
+  });
+	
 }
 
 
