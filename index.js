@@ -4,7 +4,6 @@ const DBConneection = require('./database');
 const flash = require('connect-flash');
 
 const express = require('express'),
-	var inm = 1;
     app = express(),
     port = process.env.PORT || 3000;
 const passport = require('passport');
@@ -127,7 +126,7 @@ app.get('/api/deploy', (req, res) => {
     	currentRequests[id] = res;	
 	}); */
     ethConnection.deployContract("0xca8b218de3ae8cba66fc3fd81d80d9bda9fead4f85d49ae7baa8a9b484da0e1c", "Zepnina", {
-        "receiver": "0x874b54a8bd152966d63f706bae1ffeb0411921e5"
+        "receiver": "0x885d5f9b451c719e0c66b655bfe5b97ef3bab890"
     }).then(function(res) {
         currentRequests[id] = res;
     });
