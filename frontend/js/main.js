@@ -24,6 +24,7 @@ function checkStatus(id){
     'type' : 'GET',
     'success' : function(data) {
 		  if(data != 'null'){
+			  var link = "<a target='_blank' href='https://ropsten.etherscan.io/address/"+data+"'>"+data+"</a>";
 			  $("#contId").text(data);
 			  $("#alertDeploy").slideDown( "slow", function() {});
 		  setTimeout(function(){
