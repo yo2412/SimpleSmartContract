@@ -23,7 +23,7 @@ function checkStatus(id){
     'url' : apiUrl + 'api/status/'+id,
     'type' : 'GET',
     'success' : function(data) {
-		  if(data != null){
+		  if(data != 'null'){
 			  $("#contId").text(data);
 			  $("#alertDeploy").slideDown( "slow", function() {});
 		  setTimeout(function(){
