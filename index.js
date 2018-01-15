@@ -4,6 +4,7 @@ const DBConneection = require('./database');
 const flash = require('connect-flash');
 
 const express = require('express'),
+	var inm = 1;
     app = express(),
     port = process.env.PORT || 3000;
 const passport = require('passport');
