@@ -11,7 +11,8 @@ function deployContract(){
 	  
 	  var id = data;
 	  checkStatus(id);
-	  
+	  $("#spinner").show()
+	  $("#form").hide()
 	  
     }
   });
@@ -27,6 +28,8 @@ function checkStatus(id){
 			  var link = "<a target='_blank' href='https://ropsten.etherscan.io/address/"+data+"'>"+data+"</a>";
 			  $("#contId").text(data);
 			  $("#alertDeploy").slideDown( "slow", function() {});
+			  $("#spinner").hide()
+				$("#form").show()
 		  setTimeout(function(){
 			  $("#alertDeploy").slideUp( "slow", function() {});
 		  }, 15000);
